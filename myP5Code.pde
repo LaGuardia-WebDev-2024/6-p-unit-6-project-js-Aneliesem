@@ -11,11 +11,18 @@ void draw(){
   strokeWeight(1);
 
   //💡⬇️⬇️⬇️💡 Your Code For This Project Goes Here
-  
-
-  
-
-}
+        
+        // rectangle
+        fill(242,160, 163); 
+        // pink
+        rect(20, 20, 80, 50); // Rectangle at x=20, y=20
+        // circle
+        fill(180, 240, 222); // Turquoise
+        ellipse(150, 100, 50, 50); // Circle is at x=150, y=100
+        // line
+        stroke(57, 69, 97); // dark Blue
+        line(200, 150, 250, 50); // Line from (200,150) to (250,50)
+      }
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
@@ -52,4 +59,3 @@ void keyPressed(){
     fillB = 0;
   }
 }
-
