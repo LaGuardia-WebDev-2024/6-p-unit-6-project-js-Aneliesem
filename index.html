@@ -12,81 +12,44 @@ Select ONE Additional
 [ no ] Feature 4 - Typewriter Animation
 [ no ] Feature 5 - Gradient Background
 -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sunset Landscape</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Unit 6 Project</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
     <style>
       body {
-        margin: 0;
-        font-family: "Arial", sans-serif;
-        background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb);
-        color: #333;
-        text-align: center;
-      }
-      h1 {
-        margin-top: 20px;
-        font-size: 2rem;
-        color: #ff6f61;
-      }
-      p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-      }
-      #canvas-container {
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-      }
-      canvas {
-        border: 2px solid #333;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-family: "Jim Nightshade", sans-serif;
+        background-image: url("https://cdn.glitch.global/2ebffbf9-8824-4e0e-9b2f-3bf563fec0f3/blurred-gradient-background-pink-color_58702-1641.avif?v=1736440876705");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        h2 {
+              color: rgb(232,143,161,255);
+              font-size: 50px;
+            }
+
+          h4 {
+            color: rgb(232,143,161,255);
+              font-size: 20px;
+          }
+
+          body {
+        font-family: "Jim Nightshade", sans-serif;
       }
     </style>
   </head>
   <body>
-    <h1>Sunset Landscape</h1>
-    <p>
-      This project is a peaceful sunset over rolling hills, I didn't copy an
-      image but I created this!
-    </p>
-    <div id="canvas-container">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-      <script>
-        function setup() {
-          createCanvas(600, 400).parent("canvas-container");
-          noLoop();
-        }
-
-        function draw() {
-          // Background sky gradient
-          let skyColor1 = color(255, 154, 158);
-          let skyColor2 = color(250, 208, 196);
-          for (let i=0; i <height;i++) {
-            let inter = map(i,0,height,0,1);
-            let c = lerpColor (skyColor1, skyColor2, inter);
-            stroke(c);
-            line(0, i, width, i);
-          }
-
-          // Sun (ellipse)
-          fill(255, 223, 99); // Yellow
-          noStroke();
-          ellipse(300, 120, 100, 100);
-
-          // Grass (rectangles)
-          fill(34, 139, 34); // Green
-          rect(0, 300, 600, 100); // Bottom rectangle
-          rect(200, 250, 200, 50); // Hill
-
-          // Lake (triangle)
-          fill(70, 130, 180); // Blue
-          triangle(250, 300, 350, 300, 300, 250);
-        }
-      </script>
+    <div class="container">
+      <div>
+        <h2 id="shapes">shapes</h2>
+        <h4 id="project">unit 6 project</h4>
+      </div>
+      <canvas id="myCanvas" data-processing-sources="myP5Code.pde"> </canvas>
     </div>
   </body>
 </html>
