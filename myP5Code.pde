@@ -8,7 +8,9 @@ void setup() {
 //🟢Draw Procedure - Runs on Repeat
 void draw(){
   fill(255,255,255);
-  strokeWeight(1);
+strokeWeight(1); // Thin 
+strokeWeight(3); // Medium 
+strokeWeight(5); // Thick 
 
   //💡⬇️⬇️⬇️💡 Your Code For This Project Goes Here
         
